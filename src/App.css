@@ -1,38 +1,156 @@
-.App {
-  text-align: center;
-}
+/* Global */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 1px;
+  box-sizing: border-box;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+h1 {
+  font-size: 40px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 22px;
+  color: rgb(150, 120, 120);
+  font-weight: bold;
+}
+h4 {
+  font-size: 16px;
+  color: rgb(186, 156, 156);
+}
+p {
+  font-size: 12px;
+  color: rgb(214, 184, 184);
+}
+body {
+  font-size: 16px;
+  background: rgb(255, 232, 232);
+  font-weight: bold;
+}
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.5;
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 48px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+  h3 {
+    font-size: 28px;
+    color: rgb(150, 120, 120);
+    font-weight: bold;
+  }
+  h4 {
+    font-size: 20px;
+    color: rgb(186, 156, 156);
+  }
+  p {
+    font-size: 15px;
+    color: rgb(214, 184, 184);
+  }
+  body {
+    font-size: 20px;
+    background: rgb(255, 232, 232);
+    font-weight: bold;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 2;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* Classes */
+
+
+
+.mainGrid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 4fr 1fr;
+  grid-template-areas: " . . . "
+                       " . middleGrid . "
+                       " . . . ";
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  min-height: 100vh;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+.middleGrid {
+  display: grid;
+  grid-area: middleGrid;
+  justify-content: center;
+  text-align: center;
+  transition: 1s;
+  background: rgb(255, 246, 245);
+  border-radius: 5px;
+  box-shadow: 0 7px 15px black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.middleGrid:hover {
+  box-shadow: 0 7px 35px black;
+}
+
+.pic-container {
+  position: relative;
+  width: 180px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+
+.aspectPic {
+  width: 180px;
+  height: 200px;
+  border-radius: 5%;
+  object-fit: fill;
+  border: 1px solid rgb(194, 161, 161);
+  box-shadow: 0 3px 5px black;
+}
+
+.aperturePic {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+}
+
+.peoplePic {
+  position: absolute;
+  bottom: 0;
+  right: 22px;
+}
+
+.btn {
+  background-color: black;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px black;
+  border: 1px solid black;
+  transition: 1s;
+  font-size: 10px;
+  width: 100px;
+  height: 17px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color:seashell;
+  box-shadow: 0 2px 5px black;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: bold;
 }
